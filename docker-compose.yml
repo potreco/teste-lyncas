@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  lyncas-books-backend:
+    container_name: Lyncas-Books-BackEnd
+    image: lyncas-books-backend
+    build:
+      context: backend/.
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - lyncasbooks-db
+
+  lyncas-books-frontend:
+    container_name: Lyncas-Books-FrontEnd
+    image: lyncas-books-frontend
+    build:
+      context: frontend/.
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - lyncasbooks-db
+
+  lyncasbooks-db:
+    container_name: Lyncas-Books-DB
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: 'lyncas'
+      POSTGRES_PASSWORD: 'abc123A'

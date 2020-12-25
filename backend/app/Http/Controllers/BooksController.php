@@ -10,9 +10,11 @@ class BooksController extends Controller
 
     public function findBooks(Request $request)
     {
-        $search = $request->search;
-
         try {
+            $search = $request->search;
+
+            if(!$search) throw new \Exception("Digite algo na busca.");
+
             $response = GoogleBooks::getBooks($search);
 
             return response()->json([
