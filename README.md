@@ -4,7 +4,9 @@
 ## Tecnologias utilizadas
 
 - React
+- Nginx
 - Laravel
+- PHP-FPM
 - Postgresql
 - Docker
 
@@ -12,5 +14,11 @@
 ### Requisitos
 Para rodar o projeto, será necessário ter instalado na máquina o Docker.
 
+## Total de horas
+Foram utilizadas cerca de 9 horas para realização total do projeto
+
 ### Comando
 `docker-compose up -d --build`
+
+
+Agradeço a oportunidade! Abraços.
