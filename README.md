@@ -14,11 +14,12 @@
 ### Requisitos
 Para rodar o projeto, será necessário ter instalado na máquina o Docker.
 
+### Passos
+1. Rode o comando `docker-compose up -d --build` e aguarde finalizar;
+2. Acesse a URL `http://localhost/`.
+
 ## Total de horas
 Foram utilizadas cerca de 9 horas para realização total do projeto
-
-### Comando
-`docker-compose up -d --build`
 
 
 Agradeço a oportunidade! Abraços.
